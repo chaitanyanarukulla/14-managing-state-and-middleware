@@ -21,7 +21,7 @@ var app = app || {};
   };
 
   //DONE: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
-  // it is doing a get call to get results and load into articles 
+  // it is doing a get call to get results and load into articles
 
   Article.fetchAll = callback => {
     $.get('/articles')
@@ -60,7 +60,7 @@ var app = app || {};
       }, []);
   };
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // DONE: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
   //this is counting number of words in the articles of certain Authors,
   Article.numWordsByAuthor = () => {
     return Article.allAuthors().map(author => {
