@@ -6,9 +6,13 @@ var app = app || {};
 
   // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
   // (put your response in a comment here)
+  //this function is rendering the contex of the articles on index page
+
+
   articleController.index = (ctx) => app.articleView.index(ctx.articles);
 
   // REVIEW: Middleware for grabbing one article by ID:
+  //  taking the request checking for  data from server and passing to next event with next();
   articleController.loadById = (ctx, next) => {
     let articleData = article => {
       ctx.articles = article;
@@ -42,7 +46,7 @@ var app = app || {};
 
   // REVIEW: Middleware for grabbing ALL articles:
   articleController.loadAll = (ctx, next) => {
-    let articleData =  () => {
+    let articleData = () => {
       ctx.articles = app.Article.all;
       next();
     };
